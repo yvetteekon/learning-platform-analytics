@@ -35,7 +35,7 @@ learning-platform-analytics/
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/yvetteekon/learning-platform-analytics.git
 cd learning-platform-analytics
 ```
 
@@ -61,7 +61,7 @@ uv run jupyter lab
 ```
 
 ```markdown
-> **Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
+    > **Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
 ```
 
 ## 📊 What the Notebook Covers
@@ -75,15 +75,15 @@ uv run jupyter lab
 
 ## 🔄 Reproducibility
 
-- All dependencies are managed via uv and pyproject.toml
+- All dependencies are managed via `uv` and `pyproject.toml`
 - Raw data is versioned with DVC
-- Run uv run dvc pull to ensure you have the latest dataset
+- Run `uv run dvc pull` to ensure you have the latest dataset
 - The entire analysis can be reproduced from scratch
 
 ## 🧩 How to Contribute / Extend
 
-1. Add new CSVs → uv run dvc add data/new_file.csv
-2. Update analysis → edit notebook.ipynb
+1. Add new CSVs → `uv run dvc add data/new_file.csv`
+2. Update analysis → edit `notebook.ipynb`
 3. Format code before committing:
 
 ```bash
@@ -104,6 +104,3 @@ uv run isort .
 | `uv run jupyter lab`                       | Start Jupyter Lab                                |
 | `uv run dvc status`                        | Check data status                                |
 
-
-Made with ❤️ using modern data tools
-Feel free to reach out if you have any questions or suggestions!
