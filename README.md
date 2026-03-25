@@ -61,7 +61,7 @@ uv run jupyter lab
 ```
 
 ```markdown
-    > **Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
+> **Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
 ```
 
 ## 📊 What the Notebook Covers
