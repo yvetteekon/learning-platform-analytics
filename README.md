@@ -20,16 +20,16 @@ This project analyzes student behavior on a learning platform (purchases, engage
 ## 📁 Project Structure
 ``bash
 learning-platform-analytics/
-├── pyproject.toml                 # Project configuration & dependencies (uv)
-├── README.md                      # This file
-├── .gitignore                     # Git ignore rules (includes DVC + data)
-├── data/                          # Raw CSV files (versioned with DVC)
-├── notebook.ipynb                 # Main Jupyter Notebook with all SQL analysis
-├── learning_platform.db           # SQLite database (generated)
-├── .dvc/                          # DVC internal configuration
-├── data.dvc                       # DVC pointer file (committed to Git)
-└── .venv/                         # Virtual environment managed by uv
-```
+`├──`pyproject.toml                 # Project configuration & dependencies (uv)
+`├──`README.md                      # This file
+`├──`.gitignore                     # Git ignore rules (includes DVC + data)
+`├──`data/                          # Raw CSV files (versioned with DVC)
+`├──`notebook.ipynb                 # Main Jupyter Notebook with all SQL analysis
+`├──`learning_platform.db           # SQLite database (generated)
+`├──`.dvc/                          # DVC internal configuration
+`├──`data.dvc                       # DVC pointer file (committed to Git)
+`└──`.venv/                         # Virtual environment managed by uv
+
 
 ## 🚀 Quick Start
 
