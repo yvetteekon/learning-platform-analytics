@@ -29,7 +29,7 @@ learning-platform-analytics/
 ├── .dvc/                          # DVC internal configuration
 ├── data.dvc                       # DVC pointer file (committed to Git)
 └── .venv/                         # Virtual environment managed by uv
-
+```
 
 ## 🚀 Quick Start
 
@@ -58,5 +58,8 @@ uv run ipykernel install --user --name=learning-platform --display-name="Python 
 
 # Launch Jupyter Lab
 uv run jupyter lab
+```
 
+```bash
 > Important: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
+```
