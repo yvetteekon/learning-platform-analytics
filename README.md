@@ -29,7 +29,7 @@ learning-platform-analytics/
 ├──.dvc/                          # DVC internal configuration
 ├──data.dvc                       # DVC pointer file (committed to Git)
 └──.venv/                         # Virtual environment managed by uv
-
+```
 
 ## 🚀 Quick Start
 
@@ -66,62 +66,44 @@ uv run jupyter lab
 
 ## 📊 What the Notebook Covers
 
-**Phase 1**: Database setup and data loading from CSVs
-**Phase 2**: Summarizing data with SQL (KPIs by category)
-**Phase 3**: Combining tables using JOINs (student journey analysis)
-**Phase 4**: Subqueries (benchmarking courses against category averages)
-**Phase 5**: Window functions (ranking, percentiles, month-over-month trends)
-**Phase 6**: Key opportunities & business recommendations
+- **Phase 1**: Database setup and data loading from CSVs
+- **Phase 2**: Summarizing data with SQL (KPIs by category)
+- **Phase 3**: Combining tables using JOINs (student journey analysis)
+- **Phase 4**: Subqueries (benchmarking courses against category averages)
+- **Phase 5**: Window functions (ranking, percentiles, month-over-month trends)
+- **Phase 6**: Key opportunities & business recommendations
 
 ## 🔄 Reproducibility
 
-All dependencies are managed via uv and pyproject.toml
-Raw data is versioned with DVC
-Run uv run dvc pull to ensure you have the latest dataset
-The entire analysis can be reproduced from scratch
+- All dependencies are managed via uv and pyproject.toml
+- Raw data is versioned with DVC
+- Run uv run dvc pull to ensure you have the latest dataset
+- The entire analysis can be reproduced from scratch
 
 ## 🧩 How to Contribute / Extend
 
-Add new CSVs → uv run dvc add data/new_file.csv
-Update analysis → edit notebook.ipynb
-Format code before committing:Bashuv run black .
+1. Add new CSVs → uv run dvc add data/new_file.csv
+2. Update analysis → edit notebook.ipynb
+3. Format code before committing:
+
+```bash
+uv run black .
 uv run isort .
+```
 
 ## 📌 Commands Cheat Sheet
 
+| Command                                    | Description                                      |
+|--------------------------------------------|--------------------------------------------------|
+| `uv sync --extra dev`                      | Install/update all dependencies (including DVC)  |
+| `uv run dvc init`                          | Initialize DVC in the project                    |
+| `uv run dvc add data`                      | Track the `data/` folder with DVC                |
+| `uv run dvc pull`                          | Download data from Google Drive                  |
+| `uv run dvc push`                          | Upload data to Google Drive                      |
+| `uv run python -m ipykernel install --user --name=learning-platform --display-name="Python (Learning Platform)"` | Register Jupyter kernel |
+| `uv run jupyter lab`                       | Start Jupyter Lab                                |
+| `uv run dvc status`                        | Check data status                                |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-CommandDescriptionuv sync --extra devInstall/update all dependenciesuv run dvc pullDownload latest datauv run dvc pushUpload data to remote storageuv run jupyter labStart Jupyter Labuv run dvc statusCheck data statusuv run black .Format code
 
 Made with ❤️ using modern data tools
 Feel free to reach out if you have any questions or suggestions!
