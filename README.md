@@ -20,15 +20,15 @@ This project analyzes student behavior on a learning platform (purchases, engage
 ## 📁 Project Structure
 ```bash
 learning-platform-analytics/
-`├──`pyproject.toml                 # Project configuration & dependencies (uv)
-`├──`README.md                      # This file
-`├──`.gitignore                     # Git ignore rules (includes DVC + data)
-`├──`data/                          # Raw CSV files (versioned with DVC)
-`├──`notebook.ipynb                 # Main Jupyter Notebook with all SQL analysis
-`├──`learning_platform.db           # SQLite database (generated)
-`├──`.dvc/                          # DVC internal configuration
-`├──`data.dvc                       # DVC pointer file (committed to Git)
-`└──`.venv/                         # Virtual environment managed by uv
+├──pyproject.toml                 # Project configuration & dependencies (uv)
+├──README.md                      # This file
+├──.gitignore                     # Git ignore rules (includes DVC + data)
+├──data/                          # Raw CSV files (versioned with DVC)
+├──notebook.ipynb                 # Main Jupyter Notebook with all SQL analysis
+├──learning_platform.db           # SQLite database (generated)
+├──.dvc/                          # DVC internal configuration
+├──data.dvc                       # DVC pointer file (committed to Git)
+└──.venv/                         # Virtual environment managed by uv
 
 
 ## 🚀 Quick Start
@@ -60,6 +60,68 @@ uv run ipykernel install --user --name=learning-platform --display-name="Python 
 uv run jupyter lab
 ```
 
-```bash
-> Important: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
+```markdown
+> **Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
 ```
+
+## 📊 What the Notebook Covers
+
+**Phase 1**: Database setup and data loading from CSVs
+**Phase 2**: Summarizing data with SQL (KPIs by category)
+**Phase 3**: Combining tables using JOINs (student journey analysis)
+**Phase 4**: Subqueries (benchmarking courses against category averages)
+**Phase 5**: Window functions (ranking, percentiles, month-over-month trends)
+**Phase 6**: Key opportunities & business recommendations
+
+## 🔄 Reproducibility
+
+All dependencies are managed via uv and pyproject.toml
+Raw data is versioned with DVC
+Run uv run dvc pull to ensure you have the latest dataset
+The entire analysis can be reproduced from scratch
+
+## 🧩 How to Contribute / Extend
+
+Add new CSVs → uv run dvc add data/new_file.csv
+Update analysis → edit notebook.ipynb
+Format code before committing:Bashuv run black .
+uv run isort .
+
+## 📌 Commands Cheat Sheet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CommandDescriptionuv sync --extra devInstall/update all dependenciesuv run dvc pullDownload latest datauv run dvc pushUpload data to remote storageuv run jupyter labStart Jupyter Labuv run dvc statusCheck data statusuv run black .Format code
+
+Made with ❤️ using modern data tools
+Feel free to reach out if you have any questions or suggestions!
