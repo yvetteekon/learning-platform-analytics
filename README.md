@@ -18,16 +18,17 @@ This project analyzes student behavior on a learning platform (purchases, engage
 - **Black**, **isort**, **flake8** – Code quality
 
 ## 📁 Project Structure
+``bash
 learning-platform-analytics/
-├── pyproject.toml
-├── README.md
-├── .gitignore
-├── data/                  # Raw CSVs (tracked by DVC, ignored by Git)
-├── notebook.ipynb         # Main analysis notebook
-├── learning_platform.db   # Generated SQLite database
-├── .dvc/                  # DVC configuration
-├── data.dvc               # DVC pointer file for the data folder
-└── .venv/                 # Virtual environment (created by uv)
+├── pyproject.toml                 # Project configuration & dependencies (uv)
+├── README.md                      # This file
+├── .gitignore                     # Git ignore rules (includes DVC + data)
+├── data/                          # Raw CSV files (versioned with DVC)
+├── notebook.ipynb                 # Main Jupyter Notebook with all SQL analysis
+├── learning_platform.db           # SQLite database (generated)
+├── .dvc/                          # DVC internal configuration
+├── data.dvc                       # DVC pointer file (committed to Git)
+└── .venv/                         # Virtual environment managed by uv
 
 
 ## 🚀 Quick Start
@@ -36,16 +37,26 @@ learning-platform-analytics/
 ```bash
 git clone <your-repo-url>
 cd learning-platform-analytics
+```
 
 ### 2. Set up the environment with uv
-Bash# Install dependencies (including DVC)
+```bash
+# Install dependencies (including DVC)
 uv sync --extra dev
-3. Pull the data using DVC
-Bash# Download the actual CSV files (they are not stored in Git)
+```
+
+### 3. Pull the data using DVC
+```bash
+# Download the actual CSV files (they are not stored in Git)
 uv run dvc pull
-4. Start Jupyter Notebook
-Bash# Register the kernel (first time only)
+```
+
+### 4. Start Jupyter Notebook
+```bash
+# Register the kernel (first time only)
 uv run ipykernel install --user --name=learning-platform --display-name="Python (Learning Platform)"
 
 # Launch Jupyter Lab
 uv run jupyter lab
+
+> Important: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
