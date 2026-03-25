@@ -18,7 +18,7 @@ This project analyzes student behavior on a learning platform (purchases, engage
 - **Black**, **isort**, **flake8** – Code quality
 
 ## 📁 Project Structure
-``bash
+```bash
 learning-platform-analytics/
 `├──`pyproject.toml                 # Project configuration & dependencies (uv)
 `├──`README.md                      # This file
