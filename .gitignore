@@ -1,0 +1,81 @@
+# =============================================
+# Virtual Environment & uv
+# =============================================
+.venv/
+uv.lock
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# =============================================
+# DVC (Data Version Control)
+# =============================================
+.dvc/cache/
+.dvc/tmp/
+.dvc/lock
+.dvc/state
+.dvc/config.local
+.dvc/cache.db
+*.dvc.lock
+
+# Ignore actual data files (DVC will track them via .dvc files)
+data/
+!data/.gitkeep          # optional: keep folder structure if empty
+
+# =============================================
+# Jupyter & Notebooks
+# =============================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Temporary notebook outputs (optional - remove if you want to track outputs)
+notebooks/
+*.html
+*.pdf
+
+# =============================================
+# Database files
+# =============================================
+*.db
+*.sqlite
+*.sqlite3
+learning_platform.db
+
+# =============================================
+# IDE & Editor files
+# =============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =============================================
+# OS generated files
+# =============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# =============================================
+# Build & Distribution
+# =============================================
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# =============================================
+# Logs & Temporary files
+# =============================================
+*.log
+*.tmp
