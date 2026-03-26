@@ -1,24 +1,20 @@
 # Learning Platform Analytics
 
-**Identifying Growth Opportunities using SQLite + DVC**
+**Identifying Growth Opportunities**
 
 This project analyzes student behavior on a learning platform (purchases, engagement, learning progress, ratings, quizzes, exams, and community questions) to uncover actionable insights for improvement.
 
-## 🎯 Objectives
-- Demonstrate core SQL skills: summarization, JOINs, subqueries, and window functions
-- Build a reproducible analytics workflow using modern tools
-- Identify high-impact opportunities such as content refresh, retention campaigns, and assessment improvements
+## 📊 What the Notebook Covers
+
+- **Phase 1**: Database setup and data loading from CSVs
+- **Phase 2**: Summarizing data with SQL (KPIs by category)
+- **Phase 3**: Combining tables using JOINs (student journey analysis)
+- **Phase 4**: Subqueries (benchmarking courses against category averages)
+- **Phase 5**: Window functions (ranking, percentiles, month-over-month trends)
+- **Phase 6**: Key opportunities & business recommendations
 
 ## 🛢️ Data Source
 - 365 Learning Data Challenge (October 2022) 
-
-## 🛠️ Tech Stack
-- **Python** 3.11+
-- **SQLite** – Database
-- **uv** – Lightning-fast package manager & virtual environment
-- **DVC** – Data Version Control (manages raw CSVs outside Git)
-- **Jupyter Notebook** + **pandas**, **matplotlib**, **seaborn**
-- **Black**, **isort**, **flake8** – Code quality
 
 ## 📁 Project Structure
 ```bash
@@ -33,14 +29,13 @@ learning-platform-analytics/
 ├──data.dvc                       # DVC pointer file (committed to Git)
 └──.venv/                         # Virtual environment managed by uv
 ```
-## 📊 What the Notebook Covers
 
-- **Phase 1**: Database setup and data loading from CSVs
-- **Phase 2**: Summarizing data with SQL (KPIs by category)
-- **Phase 3**: Combining tables using JOINs (student journey analysis)
-- **Phase 4**: Subqueries (benchmarking courses against category averages)
-- **Phase 5**: Window functions (ranking, percentiles, month-over-month trends)
-- **Phase 6**: Key opportunities & business recommendations
+## 🔄 Reproducibility
+
+- All dependencies are managed via `uv` and `pyproject.toml`
+- Raw data is versioned with DVC
+- Run `uv run dvc pull` to ensure you have the latest dataset
+- The entire analysis can be reproduced from scratch
 
 ## 🚀 Quick Start
 ### Option 1: Using the Setup Script (Recommended)
@@ -93,13 +88,6 @@ uv run jupyter lab
 ```
 
 **Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
-
-## 🔄 Reproducibility
-
-- All dependencies are managed via `uv` and `pyproject.toml`
-- Raw data is versioned with DVC
-- Run `uv run dvc pull` to ensure you have the latest dataset
-- The entire analysis can be reproduced from scratch
 
 
 ## 📌 Commands Cheat Sheet
