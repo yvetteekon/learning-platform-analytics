@@ -9,6 +9,9 @@ This project analyzes student behavior on a learning platform (purchases, engage
 - Build a reproducible analytics workflow using modern tools
 - Identify high-impact opportunities such as content refresh, retention campaigns, and assessment improvements
 
+## 🛢️ Data Source
+- 365 Learning Data Challenge (October 2022) 
+
 ## 🛠️ Tech Stack
 - **Python** 3.11+
 - **SQLite** – Database
@@ -30,8 +33,37 @@ learning-platform-analytics/
 ├──data.dvc                       # DVC pointer file (committed to Git)
 └──.venv/                         # Virtual environment managed by uv
 ```
+## 📊 What the Notebook Covers
+
+- **Phase 1**: Database setup and data loading from CSVs
+- **Phase 2**: Summarizing data with SQL (KPIs by category)
+- **Phase 3**: Combining tables using JOINs (student journey analysis)
+- **Phase 4**: Subqueries (benchmarking courses against category averages)
+- **Phase 5**: Window functions (ranking, percentiles, month-over-month trends)
+- **Phase 6**: Key opportunities & business recommendations
 
 ## 🚀 Quick Start
+### Option 1: Using the Setup Script (Recommended)
+
+The easiest way to set up the project is by using the included `setup.sh` script:
+
+```bash
+# 1. Make the script executable
+chmod +x setup.sh
+
+# 2. Run the setup
+./setup.sh
+```
+After the script finishes, run:
+
+```bash
+uv run dvc pull          # Download the raw CSV data
+uv run jupyter lab       # Start Jupyter Lab
+```
+
+**Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
+
+### Option 2: Manual Setup
 
 ### 1. Clone the repository
 ```bash
@@ -62,16 +94,6 @@ uv run jupyter lab
 
 **Important**: In Jupyter Lab, select the kernel "Python (Learning Platform)" from the top right
 
-
-## 📊 What the Notebook Covers
-
-- **Phase 1**: Database setup and data loading from CSVs
-- **Phase 2**: Summarizing data with SQL (KPIs by category)
-- **Phase 3**: Combining tables using JOINs (student journey analysis)
-- **Phase 4**: Subqueries (benchmarking courses against category averages)
-- **Phase 5**: Window functions (ranking, percentiles, month-over-month trends)
-- **Phase 6**: Key opportunities & business recommendations
-
 ## 🔄 Reproducibility
 
 - All dependencies are managed via `uv` and `pyproject.toml`
@@ -79,21 +101,12 @@ uv run jupyter lab
 - Run `uv run dvc pull` to ensure you have the latest dataset
 - The entire analysis can be reproduced from scratch
 
-## 🧩 How to Contribute / Extend
-
-1. Add new CSVs → `uv run dvc add data/new_file.csv`
-2. Update analysis → edit `notebook.ipynb`
-3. Format code before committing:
-
-```bash
-uv run black .
-uv run isort .
-```
 
 ## 📌 Commands Cheat Sheet
 
 | Command                                    | Description                                      |
 |--------------------------------------------|--------------------------------------------------|
+| `./setup.sh`                               | Run full project setup (recommended)             |
 | `uv sync --extra dev`                      | Install/update all dependencies (including DVC)  |
 | `uv run dvc init`                          | Initialize DVC in the project                    |
 | `uv run dvc add data`                      | Track the `data/` folder with DVC                |

@@ -33,14 +33,14 @@ data/
 *.nbconvert.ipynb
 
 # Temporary notebook outputs (optional - remove if you want to track outputs)
-notebooks/
 *.html
 *.pdf
 
 # =============================================
 # Documentation files
 # =============================================
-TODO.md
+backup/
+documents/
 
 # =============================================
 # Database files
