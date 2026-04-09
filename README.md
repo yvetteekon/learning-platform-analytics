@@ -58,19 +58,8 @@ uv run jupyter lab
 | `uv run dvc add data`                      | Track the `data/` folder with DVC                |
 | `uv run dvc pull`                          | Download raw CSV data                            |
 | `uv run dvc push`                          | Upload data to remote                            |
-| `uv run jupyter lab`                       | Start Jupyter Lab                        |
+| `uv run jupyter lab`                       | Start Jupyter Lab                            |
 | `uv run dvc status`                        | Check data status                                |
-
-
-| Command | Description |
-|---|---|
-| `./setup.sh` | Run full project setup (recommended) |
-| `uv sync --extra dev` | Install/update all dependencies (including DVC) |
-| `uv run dvc add data` | Track the `data/` folder with DVC |
-| `uv run dvc pull` | Download raw CSV data |
-| `uv run dvc push`  | Upload data to remote |
-| `uv run jupyter lab` | Start Jupyter Lab |
-| `uv run dvc status` | Check data status |
 
 ```
 
