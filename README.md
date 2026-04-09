@@ -2,13 +2,6 @@
 
 Analysis of student engagement, purchases, ratings, and assessments on a learning platform to identify key opportunities for improvement.
 
-## Features
-
-- Modular Python + SQL codebase
-- Demonstrates: Summarizing Data, JOINs, Subqueries, Window Functions
-- Uses modern tooling: uv, DVC, SQLite
-- Clean, maintainable structure
-
 ## Project Structure
 
 ```markdown
@@ -29,10 +22,12 @@ learning-platform-analytics/
 ├── learning_platform.db     # Generated SQLite database
 ├── .dvc/
 └── .venv/
+```
 
 ## Quick Start
 ### Using Setup Script (Recommended)
 
+```markdown
 # 1. Make script executable
 chmod +x setup.sh
 
@@ -41,6 +36,7 @@ chmod +x setup.sh
 
 uv run dvc pull          # Download raw data
 uv run jupyter lab       # Start Jupyter Lab
+```
 
 ## Manual Setup
 uv sync --extra dev
