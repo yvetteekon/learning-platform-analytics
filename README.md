@@ -50,6 +50,7 @@ uv run jupyter lab
 
 ## Commands Cheat Sheet
 
+```markdown
 Command,Description
 ./setup.sh,Run full project setup
 uv sync --extra dev,Install/update dependencies
@@ -57,6 +58,7 @@ uv run dvc pull,Download raw CSV data
 uv run dvc push,Upload data to remote
 uv run jupyter lab,Start Jupyter Lab
 uv run dvc status,Check data status
+```
 
 ## Development
 
