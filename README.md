@@ -39,11 +39,14 @@ uv run jupyter lab       # Start Jupyter Lab
 ```
 
 ## Manual Setup
+
+```markdown
 uv sync --extra dev
 uv run dvc init --no-scm
 uv run dvc add data                  # First time only
 uv run python -m ipykernel install --user --name=learning-platform --display-name="Python (Learning Platform)"
 uv run jupyter lab
+```
 
 ## Commands Cheat Sheet
 
@@ -56,9 +59,12 @@ uv run jupyter lab,Start Jupyter Lab
 uv run dvc status,Check data status
 
 ## Development
+
+```markdown
 # Format code
 uv run black .
 uv run isort .
 
 # Run setup again after changes
 ./setup.sh
+```
